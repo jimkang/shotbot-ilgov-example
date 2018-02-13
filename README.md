@@ -9,7 +9,52 @@ See behavior/il-gov-behavior.js for the behavior definition.
 
 After you clone this, you need to create a `configs/il-gov-config.js` file that looks like the example below, except that it only needs Twitter credentials. The GitHub stuff can be left out.
 
-Run it by doing an `npm install` and then `BOT=il-gov node post-shot.js` or `make run-il-gov`.
+If you are running it on OS X, I've found that you can run it by doing an `npm install` and then `BOT=il-gov node post-shot.js` or `make run-il-gov`.
+
+In order to run it on Ubuntu 16, I needed to do the following first:
+
+- Copy the Makefile in this project (or the entire project) to it.
+- Run `make install-chromium-deps` on there.
+- Alternately you can run the contents of that Make target there:
+
+    apt-get install gconf-service \
+    libasound2 \
+    libatk1.0-0 \
+    libc6 \
+    libcairo2 \
+    libcups2 \
+    libdbus-1-3 \
+    libexpat1 \
+    libfontconfig1 \
+    libgcc1 \
+    libgconf-2-4 \
+    libgdk-pixbuf2.0-0 \
+    libglib2.0-0 \
+    libgtk-3-0 \
+    libnspr4 \
+    libpango-1.0-0 \
+    libpangocairo-1.0-0 \
+    libstdc++6 \
+    libx11-6 \
+    libx11-xcb1 \
+    libxcb1 \
+    libxcomposite1 \
+    libxcursor1 \
+    libxdamage1 \
+    libxext6 \
+    libxfixes3 \
+    libxi6 \
+    libxrandr2 \
+    libxrender1 \
+    libxss1 \
+    libxtst6 \
+    ca-certificates \
+    fonts-liberation \
+    libappindicator1 \
+    libnss3 \
+    lsb-release \
+    xdg-utils \
+    wget
 
 Tested with Node 8. Will probably work fine with Node 6 or higher.
 
