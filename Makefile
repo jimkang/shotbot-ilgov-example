@@ -12,11 +12,11 @@ sync:
 	rsync -a $(HOMEDIR) $(USER)@$(SERVER):/opt --exclude node_modules/
 	$(SSHCMD) "cd $(APPDIR) && npm install"
 
-run-hills:
-	BOT=hills node post-shot.js
+run-il-gov:
+	BOT=il-gov node post-shot.js
 
-run-hills-dry:
-	BOT=hills node post-shot.js --dry
+run-il-gov-dry:
+	BOT=il-gov node post-shot.js --dry
 
 prettier:
 	prettier --single-quote --write "**/*.js"

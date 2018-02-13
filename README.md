@@ -3,6 +3,18 @@ shotbot
 
 Multi-tenant app for bots that post screenshots of web pages.
 
+This fork is configured to post pictures of the ProPublica Illinois governor's race widget.
+
+See behavior/il-gov-behavior.js for the behavior definition.
+
+After you clone this, you need to create a `configs/il-gov-config.js` file that looks like the example below, except that it only needs Twitter credentials. The GitHub stuff can be left out.
+
+Run it by doing an `npm install` and then `BOT=il-gov node post-shot.js` or `make run-il-gov`.
+
+Tested with Node 8. Will probably work fine with Node 6 or higher.
+
+There's an instance of this posting to [@ilgovrace](https://twitter.com/ilgovrace) every three hours (which is probably pointless because I think the widget updates daily).
+
 Installation
 ------------
 
